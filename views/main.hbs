@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1" />
+    <title>Limp Detector</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #square {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 22px;
+        }
+        h2{
+            font-style: italic;
+            font-size: 40px;
+        }
+        div {
+            align-self: center;
+        }
+        .question{
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="question"><h1>Are you</h1><h2>Runway Ready?</h2></div>
+        {{#if movement}}
+        <div id="square" style="background-color:green;">Good walk!</div>
+        {{else}}
+        <div id="square" style="background-color:red;">I sense wobbling!</div>
+        {{/if}}
+    <script src="script.js"></script>
+</body>
+</html>
